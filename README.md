@@ -1,27 +1,35 @@
-# BLACKBOTSS
+<h1 align="center">    yousef source</h1>
+<p align="center">
+<img src="https://i.ibb.co/sp4vDB7/file-20.jpg"></p>
+______________________________________________________________________________________________________________________
 
-🖨┇سورس يوسف .  
- — — — — — — — — —
-⚙️┇في حال تقوم بتنصيب السورس لأول مره في السيرفر استخدم هذه الاوامر ⬇️ .
- — — — — — — — — —
-git clone https://github.com/Yosef-lbban/BLACKBOTSS && cd BLACKBOTSS && chmod +x install.sh && ./install.sh
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-⬅️┇بعد الانتهاء من التنصيب سيطلب التوكن
-⬅️┇ترسل التوكن وتضغط Enter 
-⬅️┇بعدها يطلب معرف المطور 
-⬅️┇ترسل المعرف وتضغط Enter  
- — — — — — — — — —
-⬅️┇في حال قمت بتنصيب السورس مسبقأ وتريد عمل يوزرات فقط قم بأستخدام الطريقه السريعه ⬇️
- — — — — — — — — —
-git clone https://github.com/Yosef-lbban/BLACKBOTSS && cd BLACKBOTSS && chmod +x Fastinstall.sh &&chmod +x install.sh && ./Fastinstall.sh
- — — — — — — — — —
-⬅️┇مباشرآ سيطلب التوكن
-⬅️┇ترسل التوكن وتضغط Enter
-⬅️┇بعدها يطلب معرف المطور   
-⬅️┇ترسل المعرف  وتضغط Enter
- — — — — — — — — —
-↙️┇التشغيل 
-./BLACKBOTSS/ts
-↙️┇كود الحذف 
-rm -rf BLACKBOTSS
- — — — — — — — — —
+## How to install the bot
+
+### There are three ways to install [1,2,3]:-
+
+<h2 align="center">1</h2>
+
+**If it was your first install**
+
+#### The following code should be used
+
+**use::**  ``` git clone https://github.com/Yosef-lbban/BLACKBOTSS && cd BLACKBOTSS && chmod +x install.sh && ./install.sh ```
+______________________________________________________________________________________________________________________
+
+<h3 align="center">2</h3>
+
+**If you have already installed it previously**
+
+#### The following code should be used
+
+**use::**  ``` git clone https://github.com/Yosef-lbban/BLACKBOTSS && cd BLACKBOTSS && chmod +x Fastinstall.sh &&chmod +x install.sh && ./Fastinstall.sh```
+
+______________________________________________________________________________________________________________________
+
+<h4 align="center">3</h4> 
+
+**Run bot**
+
+**The following code should be used**
+
+**use::**```./BLACKBOTSS/ts```
