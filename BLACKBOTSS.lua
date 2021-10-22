@@ -8632,7 +8632,7 @@ key = {
 {{text = '- قناة البوت .',url="t.me/Yousef_Labban1"}},
 {{text = '- 𝘊𝘢𝘭𝘭 𝘜𝘴 .',url="t.me/Mhsliem15bot"}},
 }
-send_inline_key(msg.chat_id_,"*- 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘵𝘩𝘦 𝘣𝘭𝘢𝘤𝘬 𝘴𝘰𝘶𝘳𝘤𝘦 .*",nil,key,msg.id_/2097152/0.5)
+send_inline_key(msg.chat_id_,"*- سورس يوسف .*",nil,key,msg.id_/2097152/0.5)
 end
 if text == 'رابط الحذف' or text == 'بوت الحذف' then  
 if AddChannel(msg.sender_user_id_) == false then
