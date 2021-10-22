@@ -2458,9 +2458,9 @@ if text == ("مسح الثانويين") and VIP_DeV(msg) then
 database:del(bot_id.."DEV:Sudo:T")
 send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙ تم مسح قائمة المطورين الثانويين  ")
 end
-if text == ("مسح قائكو العام") and DevBLACKBOTSS(msg) then
+if text == ("مسح قائمة العام") and DevBLACKBOTSS(msg) then
 database:del(bot_id.."BLACKBOTSS:GBan:User")
-send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙تم مسح قائكو العام")
+send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙تم مسح قائمة العام")
 return false
 end
 if text == ("مسح المطورين") and DevBLACKBOTSS(msg) then
@@ -2537,7 +2537,7 @@ end
 return false
 end
 database:del(bot_id.."BLACKBOTSS:Muted:User"..msg.chat_id_)
-send(msg.chat_id_, msg.id_, "🗑︙ تم مسح قائكو المكتومين ")
+send(msg.chat_id_, msg.id_, "🗑︙ تم مسح قائمة المكتومين ")
 end
 if text == "مسح المحظورين" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
@@ -2552,7 +2552,7 @@ end
 database:del(bot_id.."BLACKBOTSS:Ban:User"..msg.chat_id_)
 send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙تم مسح المحظورين")
 end
-if text == ("قائكو العام") and DevBLACKBOTSS(msg) then
+if text == ("قائمة العام") and DevBLACKBOTSS(msg) then
 local list = database:smembers(bot_id.."BLACKBOTSS:GBan:User")
 t = "\n❈ 🇸🇦︙قائمة المحظورين عام \n — — — — — — — — — \n"
 for k,v in pairs(list) do
@@ -2917,7 +2917,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text == "مسح قائكو المالكين" and DevBot(msg) then
+if text == "مسح قائمة المالكين" and DevBot(msg) then
 database:del(bot_id.."creator"..msg.chat_id_)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
@@ -4904,7 +4904,7 @@ local msg_id = msg.id_/2097152/0.5
 local done = json:decode(https.request("https://black-source.tk/BlackTeAM/searchinbot.php?token="..token.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
 end
 end
-if text == "قائكو المنع" and Addictive(msg) then  
+if text == "قائمة المنع" and Addictive(msg) then  
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4916,7 +4916,7 @@ return false
 end
 database:set(bot_id.."BLACKBOTSS:Filter:msg",msg.chat_id_)
 tdcli_function ({ID = "GetUser",user_id_ = bot_id},function(arg,data) 
-local Text ='❈ 🇸🇦︙قائكو الممنوعات'
+local Text ='❈ 🇸🇦︙قائمة الممنوعات'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'صور', url="https://t.me/"..data.username_.."?start=ph"..msg.chat_id_},{text = 'كلمات', url="https://t.me/"..data.username_.."?start=msg"..msg.chat_id_}},
@@ -4926,7 +4926,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
-if text == "مسح قائكو المنع" and Addictive(msg) then   
+if text == "مسح قائمة المنع" and Addictive(msg) then   
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -4952,7 +4952,7 @@ local listPhoto = database:smembers(bot_id.."BLACKBOTSS:List:Filter:Photo"..msg.
 for k,v in pairs(listPhoto) do  
 database:srem(bot_id.."BLACKBOTSS:List:Filter:Photo"..msg.chat_id_,v)  
 end  
-send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم مسح قائكو المنع")  
+send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم مسح قائمة المنع")  
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Addictive(msg) then       
 send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙الان ارسل { كلمه،صورة،ملصق،متحركة } لمنعه من المجموعة")  
@@ -5185,7 +5185,7 @@ end
 return false
 end
 local list = database:smembers(bot_id.."BLACKBOTSS:List:Cmd:Group:New"..msg.chat_id_.."")
-t = "❈ 🇸🇦︙قائكو الاوامر المضافة  \n — — — — — — — — — \n"
+t = "❈ 🇸🇦︙قائمة الاوامر المضافة  \n — — — — — — — — — \n"
 for k,v in pairs(list) do
 Cmds = database:get(bot_id.."BLACKBOTSS:Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 if Cmds then 
@@ -5590,7 +5590,7 @@ send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم مسح ردود المدير")
 end
 if text == ("ردود المدير") and Owner(msg) then
 local list = database:smembers(bot_id.."BLACKBOTSS:List:Manager"..msg.chat_id_.."")
-text = "❈ 🇸🇦︙قائكو ردود المدير \n — — — — — — — — —\n"
+text = "❈ 🇸🇦︙قائمة ردود المدير \n — — — — — — — — —\n"
 for k,v in pairs(list) do
 if database:get(bot_id.."BLACKBOTSS:Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = "متحركة 🎭"
@@ -5746,7 +5746,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."BLACKBOTSS:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_.."") == "true2" then
-send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم ازالة الرد من قائكو الردود")
+send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم ازالة الرد من قائمة الردود")
 database:del(bot_id.."BLACKBOTSS:Add:Rd:Manager:AudioCa"..text..msg.chat_id_)
 database:del(bot_id.."BLACKBOTSS:Add:Rd:Manager:VicoCa"..text..msg.chat_id_)
 database:del(bot_id.."BLACKBOTSS:Add:Rd:Manager:PhotoCa"..text..msg.chat_id_)
@@ -5965,7 +5965,7 @@ return false end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."BLACKBOTSS:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم ازالة الرد من قائكو ردود المطور")
+send(msg.chat_id_, msg.id_,"❈ 🇸🇦︙تم ازالة الرد من قائمة ردود المطور")
 list = {"Add:Rd:Sudo:Audio","Add:Rd:Sudo:File","Add:Rd:Sudo:Video","Add:Rd:Sudo:Photo","Add:Rd:Sudo:Text","Add:Rd:Sudo:stekr","Add:Rd:Sudo:vico","Add:Rd:Sudo:Gif"}
 for k,v in pairs(list) do
 database:del(bot_id..'BLACKBOTSS:'..v..text)
@@ -7896,7 +7896,7 @@ end
 return false
 end
 Teext = [[
-❈ 🇸🇦︙قائكو الالعاب الموجوده
+❈ 🇸🇦︙قائمة الالعاب الموجوده
  — — — — — — — — — 
 ❈ 🇸🇦︙لعبة البات -› بات
 ❈ 🇸🇦︙لعبة الامثله -› امثله
@@ -8187,7 +8187,7 @@ if text and text:match("^زخرفة (.*)$") and database:get(bot_id.."BLACKBOTSS
 local TextZhrfa = text:match("^زخرفة (.*)$")
 zh = https.request('https://black-source.tk/BlackTeAM/frills.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
-t = "\n❈ 🇸🇦︙قائكو الزخرفة \n — — — — — — — — — \n"
+t = "\n❈ 🇸🇦︙قائمة الزخرفة \n — — — — — — — — — \n"
 i = 0
 for k,v in pairs(zx.ok) do
 i = i + 1
@@ -8761,7 +8761,7 @@ Text = [[
 ❈ 🇸🇦︙المحظورين
 ❈ 🇸🇦︙المميزين
 ❈ 🇸🇦︙الصلاحيات
-❈ 🇸🇦︙قائكو المنع
+❈ 🇸🇦︙قائمة المنع
  — — — — — — — — —
 ❈ 🇸🇦︙الغاء كتم
 ❈ 🇸🇦︙الغاء حظر
@@ -8787,7 +8787,7 @@ Text = [[
 ❈ 🇸🇦︙وضع قوانين
 ❈ 🇸🇦︙وضع ترحيب
  — — — — — — — — — 
-❈ 🇸🇦︙مسح قائكو المنع
+❈ 🇸🇦︙مسح قائمة المنع
 ❈ 🇸🇦︙مسح المحظورين
 ❈ 🇸🇦︙مسح المميزين
 ❈ 🇸🇦︙مسح المكتومين
@@ -8901,7 +8901,7 @@ Text = [[
 ❈ 🇸🇦︙اضف رد للكل 
 ❈ 🇸🇦︙حذف رد للكل 
 ❈ 🇸🇦︙مسح المطورين
-❈ 🇸🇦︙مسح قائكو العام
+❈ 🇸🇦︙مسح قائمة العام
 ❈ 🇸🇦︙تعطيل الاذاعة 
 ❈ 🇸🇦︙تفعيل الاذاعة 
 ❈ 🇸🇦︙تعطيل الاذاعة
@@ -9138,7 +9138,7 @@ local keyboard = {
 {'الاحصائيات ⌔'},                     
 {'الثانويين ⌔','مسح الثانويين ⌔'},
 {'المطورين ⌔','مسح المطورين ⌔'},
-{'قائكو العام ⌔','مسح قائكو العام ⌔'},
+{'قائمة العام ⌔','مسح قائمة العام ⌔'},
 {'- تفعيل الاشتراك الاجباري ⌔ .','- تعطيل الاشتراك الاجباري ⌔ .'},
 {'تنظيف القروبات ⌔','تنظيف المشتركين ⌔'},
 {'اذاعة بالتوجيه ⌔','اذاعة بالتوجيه خاص ⌔'},
@@ -9660,16 +9660,16 @@ local texxt = string.match(text, "(.*)")
 database:set(bot_id..'text:ch:user',texxt)
 send(msg.chat_id_, msg.id_,'❈ 🇸🇦︙تم تغيير رسالة الاشتراك ')
 end
-if text == ("مسح قائكو العام ⌔") and DevBLACKBOTSS(msg) then
+if text == ("مسح قائمة العام ⌔") and DevBLACKBOTSS(msg) then
 database:del(bot_id.."BLACKBOTSS:GBan:User")
-send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙تم مسح قائكو العام")
+send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙تم مسح قائمة العام")
 return false
 end
 if text == ("مسح المطورين ⌔") and DevBLACKBOTSS(msg) then
 database:del(bot_id.."BLACKBOTSS:Sudo:User")
 send(msg.chat_id_, msg.id_, "\n❈ 🇸🇦︙ تم مسح قائمة المطورين  ")
 end
-if text == ("قائكو العام ⌔") and DevBLACKBOTSS(msg) then
+if text == ("قائمة العام ⌔") and DevBLACKBOTSS(msg) then
 local list = database:smembers(bot_id.."BLACKBOTSS:GBan:User")
 t = "\n❈ 🇸🇦︙قائمة المحظورين عام \n — — — — — — — — — \n"
 for k,v in pairs(list) do
