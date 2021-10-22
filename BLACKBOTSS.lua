@@ -489,8 +489,8 @@ function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
 local UserName = (data.username_ or "Yousef_Labban1")
-local NameUser = "[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
-local NameUserr = "[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUser = "[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUserr = "[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
 send(msg.chat_id_, msg.id_,NameUser.."\n"..text.."\n— — — — — — — — —\n❈ 🇸🇦︙تم تنفيذ الامر بخاصية ( المسح )\n")
 return false
@@ -3582,19 +3582,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local BLACKBOTSSrt = database:get(bot_id.."BLACKBOTSS:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if BLACKBOTSSrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA) 
 database:sadd(bot_id.."BLACKBOTSS:Special:User"..msg.chat_id_,result.sender_user_id_)  
 elseif BLACKBOTSSrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)
 database:sadd(bot_id.."BLACKBOTSS:Mod:User"..msg.chat_id_,result.sender_user_id_)  
 elseif BLACKBOTSSrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)  
 database:sadd(bot_id.."BLACKBOTSS:Manager"..msg.chat_id_,result.sender_user_id_)  
 elseif BLACKBOTSSrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..RTPA.." هنا\n")
 end
 end,nil)   
 end   
@@ -3617,19 +3617,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local BLACKBOTSSrt = database:get(bot_id.."BLACKBOTSS:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if BLACKBOTSSrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."BLACKBOTSS:Special:User"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif BLACKBOTSSrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."BLACKBOTSS:Mod:User"..msg.chat_id_,result.sender_user_id_) 
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif BLACKBOTSSrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."BLACKBOTSS:Manager"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif BLACKBOTSSrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنزيله من "..RTPA.." هنا\n")  
 end
 end,nil)   
 end   
@@ -3652,19 +3652,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local BLACKBOTSSrt = database:get(bot_id.."BLACKBOTSS:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if BLACKBOTSSrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."BLACKBOTSS:Special:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif BLACKBOTSSrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."BLACKBOTSS:Mod:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif BLACKBOTSSrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."BLACKBOTSS:Manager"..msg.chat_id_,result.id_)  
 database:set(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif BLACKBOTSSrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم رفعه "..text1[2].." هنا")   
 end
 else
 info = "❈ 🇸🇦︙المعرف غلط"
@@ -3690,19 +3690,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local BLACKBOTSSrt = database:get(bot_id.."BLACKBOTSS:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if BLACKBOTSSrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."BLACKBOTSS:Special:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif BLACKBOTSSrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."BLACKBOTSS:Mod:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif BLACKBOTSSrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."BLACKBOTSS:Manager"..msg.chat_id_,result.id_)  
 database:del(bot_id.."BLACKBOTSS:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif BLACKBOTSSrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- قناة البوت .](https://t.me/Yousef_Labban1)\n — — — — — — — — —\n❈ 🇸🇦︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "Yousef_Labban1")..")".."\n❈ 🇸🇦︙تم تنريله من "..text1[2].." هنا")   
 end
 else
 info = "❈ 🇸🇦︙المعرف غلط"
@@ -9882,7 +9882,7 @@ gk = https.request('https://black-source.tk/BlackTeAM/Horoscopes.php?br='..URL.e
 br = JSON.decode(gk)
 x = {} 
 x.inline_keyboard = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(br.ok.hso)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(x)) 
 end
@@ -9892,7 +9892,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="❈ 🇸🇦︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9903,7 +9903,7 @@ local idchci = database:get(bot_id.."BLACKBOTSS:Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="❈ 🇸🇦︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9915,7 +9915,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="❈ 🇸🇦︙تم اللغاء منعه بنجاح"
 inline = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9938,7 +9938,7 @@ if DAata and DAata:match("^delallanimation(.*)$") and Addictive(data) then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="❈ 🇸🇦︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9951,7 +9951,7 @@ if DAata and DAata:match("^delallph(.*)$") and Addictive(data) then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="❈ 🇸🇦︙تم اللغاء منع كل الصور"
 inline = {
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9976,7 +9976,7 @@ infovid = "*❈ 🇸🇦︙ اختر صيغه التنزيل الان*\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'فيديو', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'صوت', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'بصمه', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = '❈ 🇸🇦︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/Yousef_Labban1'}},
+{{text = '❈ 🇸🇦︙ قناة البوت  .',url='http://t.me/Yousef_Labban1'}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
